@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native'
 import SplashScreen from '../screen/SplashScreen'
 import DrawerNavigation from './DrawerNavigation'
+import FirstScreen from '../screen/FirstScreen'
 
 const Demo = () => {
     return (
@@ -30,6 +31,12 @@ const AppNavigator = () => {
                 <Stack.Screen
                     name='DrawerNavigation'
                     component={DrawerNavigation}
+                    options={{headerShown:false}}
+                />
+
+                <Stack.Screen
+                    name="FirstScreen"
+                    component={FirstScreen}
                     options={{headerShown:false}}
                 />
 
