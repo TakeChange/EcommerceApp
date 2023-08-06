@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native'
 import SplashScreen from '../screen/SplashScreen'
 import DrawerNavigation from './DrawerNavigation'
+import FirstScreen from '../screen/FirstScreen'
+import LoginOption from '../screen/LoginOption'
 
 const Demo = () => {
     return (
@@ -24,13 +26,25 @@ const AppNavigator = () => {
                 <Stack.Screen
                     name='Splash'
                     component={SplashScreen}
-                    options={{headerShown:false}}
+                    options={{ headerShown: false }}
                 />
 
                 <Stack.Screen
                     name='DrawerNavigation'
                     component={DrawerNavigation}
-                    options={{headerShown:false}}
+                    options={{ headerShown: false }}
+                />
+
+                <Stack.Screen
+                    name="FirstScreen"
+                    component={FirstScreen}
+                    options={{ headerShown: false }}
+                />
+
+                <Stack.Screen
+                    name="LoginOption"
+                    component={LoginOption}
+                    options={{ headerShown: false }}
                 />
 
             </Stack.Navigator>
