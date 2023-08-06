@@ -1,7 +1,7 @@
 import { View, Text, ImageBackground, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const FirstScreen = () => {
+const FirstScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -27,7 +27,7 @@ const FirstScreen = () => {
               </TouchableOpacity>
 
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate('LoginOption')}>
               <Text style={styles.skipStyle}>Skip</Text>
             </TouchableOpacity>
           </View>
@@ -55,14 +55,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     width: '90%',
-    height: '100%'
+    height: '100%',
   },
   subContainer: {
     width: '100%',
     height: '30%',
     backgroundColor: '#FFFFFF',
     marginTop: '145%',
-    borderRadius: 20
+    borderRadius: 20,
+    alignItems:'center'
   },
   headerText: {
     textAlign: 'center',
@@ -84,29 +85,27 @@ const styles = StyleSheet.create({
   },
   buttonStyle: {
     backgroundColor: "#F5F6FA",
-    padding: 18,
     width: "46%",
-    height: 56,
     borderRadius: 10,
     margin: 5
   },
   buttonStyle1: {
     backgroundColor: "#9775FA",
-    padding: 18,
     width: "46%",
-    height: 56,
     borderRadius: 10,
     margin: 5
   },
   MenText: {
     alignSelf: 'center',
     fontSize: 17,
-    color: '#8F959E'
+    color: '#8F959E',
+    margin:'10%'
   },
   WomenText: {
     alignSelf: 'center',
     fontSize: 17,
-    color: '#FFFFFF'
+    color: '#FFFFFF',
+    margin:'10%'
   },
   skipStyle: {
     textAlign: 'center',
