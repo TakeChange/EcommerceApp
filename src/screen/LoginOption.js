@@ -2,10 +2,10 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
-const LoginOption = () => {
+const LoginOption = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.backButton}>
+            <TouchableOpacity style={styles.backButton} onPress={()=>navigation.navigate('FirstScreen')}>
                 <AntDesign name='arrowleft' color='#1D1E20' size={22} />
             </TouchableOpacity>
             <Text style={styles.headerText}>Let’s Get Started</Text>
@@ -26,7 +26,7 @@ const LoginOption = () => {
             </View>
             <View style={{flexDirection:'row', marginTop: '50%',justifyContent:'center'}}>
                 <Text style={{ textAlign: 'center' }}>Already have an account?</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>navigation.navigate('SignIn')}>
                     <Text style={{fontWeight:'bold',color:'#1D1E20'}}> Signin</Text>
                 </TouchableOpacity>
             </View>
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         fontSize: 17
     },
     bottomButton:{
-        height:'8%',
+        height:'7%',
         backgroundColor:'#9775FA',
         margin:10,
         borderRadius:10,
