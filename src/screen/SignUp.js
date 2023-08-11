@@ -1,16 +1,18 @@
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, Switch, ScrollView,Image } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, Switch, ScrollView, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
 
-const SignIn = ({ navigation }) => {
+const SignUp = ({ navigation }) => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
     const [isEnabled, setIsEnabled] = useState(false);
 
     const [userError, setUserError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+    const [emailError, setEmailError] = useState('');
 
 
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
@@ -31,8 +33,15 @@ const SignIn = ({ navigation }) => {
             setPasswordError('');
         }
 
+        if (email == '') {
+            setEmailError('Email do not empty');
+            isValid = false;
+        } else {
+            setEmailError('');
+        }
+
         if (isValid) {
-            navigation.navigate('DrawerNavigation')
+            navigation.navigate('SignIn')
         }
     }
 
@@ -42,11 +51,10 @@ const SignIn = ({ navigation }) => {
                 <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('LoginOption')}>
                     <Image
                         source={require('../assets/icon/back.png')}
-                        style={{ width: 40, height: 40 }}
+                        style={{width:40,height:40}}
                     />
                 </TouchableOpacity>
-                <Text style={styles.headerText}>Welcome</Text>
-                <Text style={styles.descText}>Please enter your data to continue</Text>
+                <Text style={styles.headerText}>Sign Up</Text>
                 <View style={{ marginTop: '25%' }}>
 
                     <Text style={styles.labelText}>Username</Text>
@@ -66,9 +74,14 @@ const SignIn = ({ navigation }) => {
                         secureTextEntry={true}
                     />
                     <Text style={styles.errorMsg}>{passwordError}</Text>
-                    <TouchableOpacity style={styles.forgetStyle}>
-                        <Text style={styles.forgetText}>Forgot password?</Text>
-                    </TouchableOpacity>
+                    <Text style={styles.labelText}>Email Address</Text>
+                    <TextInput
+                        value={email}
+                        onChangeText={(text) => setEmail(text)}
+                        style={styles.fieldStyle}
+                        placeholder='Enter the email'
+                    />
+                    <Text style={styles.errorMsg}>{emailError}</Text>
 
                     <View style={styles.subContainer}>
                         <Text style={styles.remeberText}>Remember me</Text>
@@ -81,10 +94,10 @@ const SignIn = ({ navigation }) => {
                         />
                     </View>
 
-                    <View style={{ marginTop: '38%' }}>
-                        <Text style={{ textAlign: 'center' }}>By connecting your account confirm that you agree with our <Text style={{ fontWeight: 'bold', color: '#1D1E20' }}> Term and Condition</Text> </Text>
+                    <View style={{ marginTop: '48%' }}>
+                       
                         <TouchableOpacity style={styles.bottomButton} onPress={Validation}>
-                            <Text style={styles.NewAcc}>Login</Text>
+                            <Text style={styles.NewAcc}>Sign Up</Text>
                         </TouchableOpacity>
 
                     </View>
@@ -94,7 +107,7 @@ const SignIn = ({ navigation }) => {
     )
 }
 
-export default SignIn
+export default SignUp
 
 const styles = StyleSheet.create({
     container: {
@@ -122,9 +135,9 @@ const styles = StyleSheet.create({
         color: '#8F959E'
     },
     bottomButton: {
-        padding: 12,
+        padding: '4%',
         backgroundColor: '#9775FA',
-        marginTop: '5%',
+        marginTop: '3%',
         borderRadius: 10,
         justifyContent: 'center'
     },
@@ -136,7 +149,7 @@ const styles = StyleSheet.create({
     labelText: {
         fontSize: 15,
         color: '#8F959E',
-        marginTop: '5%'
+        marginTop: '1%'
     },
     fieldStyle: {
         borderBottomWidth: 1,
