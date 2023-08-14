@@ -1,7 +1,8 @@
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, Switch, ScrollView,Image } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, Switch, ScrollView, Image, ToastAndroid } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import AntDesign from 'react-native-vector-icons/AntDesign'
-
+import ToggleSwitch from 'toggle-switch-react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const SignIn = ({ navigation }) => {
 
@@ -32,7 +33,29 @@ const SignIn = ({ navigation }) => {
         }
 
         if (isValid) {
-            navigation.navigate('DrawerNavigation')
+            check();
+        }
+    }
+
+    const check = async () =>{
+        try
+        {
+            var uname = await AsyncStorage.getItem('uname');
+            var pass = await AsyncStorage.getItem('pass');
+
+            if(uname == username && pass == password)
+            {
+                ToastAndroid.show('Login Successfully',ToastAndroid.LONG);
+                navigation.navigate('DrawerNavigation')
+            }
+            else
+            {
+                ToastAndroid.show('Username and password do not match',ToastAndroid.LONG);
+            }
+        }
+        catch(e)
+        {
+            console.log(e)
         }
     }
 
@@ -72,12 +95,12 @@ const SignIn = ({ navigation }) => {
 
                     <View style={styles.subContainer}>
                         <Text style={styles.remeberText}>Remember me</Text>
-                        <Switch
-                            trackColor={{ false: '#767577', true: 'green' }}
-                            thumbColor={isEnabled ? '#FFF' : '#f4f3f4'}
-                            ios_backgroundColor="#3e3e3e"
-                            onValueChange={toggleSwitch}
-                            value={isEnabled}
+                        <ToggleSwitch
+                            isOn={isEnabled}
+                            onColor="green"
+                            offColor="#D6D6D6"
+                            size="small"
+                            onToggle={toggleSwitch}
                         />
                     </View>
 
@@ -99,14 +122,14 @@ export default SignIn
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        margin:15
+        margin: 15
     },
     backButton: {
         width: 35,
         height: 35,
         backgroundColor: '#F5F6FA',
         borderRadius: 35 / 2,
-       
+
         alignItems: 'center',
         justifyContent: 'center'
     },
