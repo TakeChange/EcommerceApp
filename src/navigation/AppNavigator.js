@@ -7,6 +7,7 @@ import DrawerNavigation from './DrawerNavigation'
 import FirstScreen from '../screen/FirstScreen'
 import LoginOption from '../screen/LoginOption'
 import SignIn from '../screen/SignIn'
+import SignUp from '../screen/SignUp'
 
 const Demo = () => {
     return (
@@ -51,6 +52,12 @@ const AppNavigator = () => {
                 <Stack.Screen
                     name="SignIn"
                     component={SignIn}
+                    options={{ headerShown: false }}
+                />
+
+                <Stack.Screen
+                    name="SignUp"
+                    component={SignUp}
                     options={{ headerShown: false }}
                 />
             </Stack.Navigator>
