@@ -1,13 +1,27 @@
 import { ImageBackground, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect } from 'react'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 const SplashScreen = ({navigation}) => {
 
     useEffect(()=>{
         setTimeout(()=>{
-            navigation.navigate('FirstScreen')
+          check();
         },3000)
     },[])
+
+    const check = async() =>{
+      var temp = await AsyncStorage.getItem('login');
+
+      if(temp == 'yes')
+      {
+        navigation.navigate('DrawerNavigation')
+      }
+      else
+      {
+        navigation.navigate('FirstScreen');
+      }
+    }
 
   return (
     <View style={styles.container}>
