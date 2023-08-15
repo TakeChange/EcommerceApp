@@ -1,6 +1,7 @@
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, Switch, ScrollView, Image } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, Switch, ScrollView, Image, ToastAndroid } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import AntDesign from 'react-native-vector-icons/AntDesign'
+import ToggleSwitch from 'toggle-switch-react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const SignUp = ({ navigation }) => {
@@ -41,7 +42,39 @@ const SignUp = ({ navigation }) => {
         }
 
         if (isValid) {
+            storeData();
+        }
+    }
+
+    const storeData = async ()=>{
+        try{
+            await AsyncStorage.setItem('uname',username);
+            await AsyncStorage.setItem('pass',password);
+            await AsyncStorage.setItem('mail',email);
+            getData();
+            ToastAndroid.show('SignUp successfully', ToastAndroid.LONG);
             navigation.navigate('SignIn')
+        }
+        catch(e)
+        {
+            console.log(e);
+        }
+    }
+
+    const getData = async ()=>{
+        try{
+            var uname = await AsyncStorage.getItem('uname');
+            var pass = await AsyncStorage.getItem('pass');
+            var mail = await AsyncStorage.getItem('mail');
+
+            console.log('Username :',uname)
+            console.log('Password :',pass)
+            console.log('Email :',mail)
+
+        }
+        catch(e)
+        {
+            console.log(e);
         }
     }
 
@@ -85,12 +118,12 @@ const SignUp = ({ navigation }) => {
 
                     <View style={styles.subContainer}>
                         <Text style={styles.remeberText}>Remember me</Text>
-                        <Switch
-                            trackColor={{ false: '#767577', true: 'green' }}
-                            thumbColor={isEnabled ? '#FFF' : '#f4f3f4'}
-                            ios_backgroundColor="#3e3e3e"
-                            onValueChange={toggleSwitch}
-                            value={isEnabled}
+                        <ToggleSwitch
+                            isOn={isEnabled}
+                            onColor="green"
+                            offColor="#D6D6D6"
+                            size="small"
+                            onToggle={toggleSwitch}
                         />
                     </View>
 
