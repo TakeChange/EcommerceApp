@@ -46,6 +46,7 @@ const SignIn = ({ navigation }) => {
             if(uname == username && pass == password)
             {
                 ToastAndroid.show('Login Successfully',ToastAndroid.LONG);
+                await AsyncStorage.setItem('login','yes');
                 navigation.navigate('DrawerNavigation')
             }
             else
