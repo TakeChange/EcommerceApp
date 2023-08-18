@@ -1,10 +1,13 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, FlatList } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, FlatList, ImageBackground } from 'react-native'
 import React, { useState } from 'react'
 import { Searchbar } from 'react-native-paper';
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import HeartComponent from '../../component/HeartComponent';
 
 const HomeScreen = ({ navigation }) => {
 
   const [searchText, setSearchText] = useState('');
+  
 
   const Brand = [
     {
@@ -29,6 +32,34 @@ const HomeScreen = ({ navigation }) => {
     },
   ];
 
+  const Product = [
+    {
+      id: '1',
+      title: 'Nike Sportswear Club Fleece',
+      image: require('../../assets/ProductImg/i1.png'),
+      price: '$99'
+
+    },
+    {
+      id: '2',
+      title: 'Trail Running Jacket Nike Windrunner',
+      image: require('../../assets/ProductImg/i2.png'),
+      price: '$101'
+    },
+    {
+      id: '3',
+      title: 'Training Top Nike Sport Clash',
+      image: require('../../assets/ProductImg/i3.png'),
+      price: '$48'
+    },
+    {
+      id: '4',
+      title: 'Trail Running Jacket Nike Windrunner',
+      image: require('../../assets/ProductImg/i4.png'),
+      price: '$78'
+    },
+  ];
+
   const renderItem = ({ item }) => {
     return (
       <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', padding: 8, backgroundColor: '#F5F6FA', margin: 5, borderRadius: 10 }}>
@@ -37,6 +68,22 @@ const HomeScreen = ({ navigation }) => {
           style={{ width: 50, height: 40, resizeMode: 'contain', backgroundColor: '#FEFEFE' }}
         />
         <Text style={{ margin: 2, fontSize: 15, color: '#1D1E20', padding: 5, fontWeight: '600' }}>{item.title}</Text>
+      </View>
+    )
+  }
+
+  const productList = ({ item }) => {
+
+    return (
+      <View style={{ width: '47.5%', marginTop: '2%', margin: 5 }}>
+        <ImageBackground
+          source={item.image}
+          style={{ height: 200, width: '100%' }}
+        >
+        <HeartComponent />
+        </ImageBackground>
+        <Text style={{ fontSize: 12, color: '#1D1E20' }}>{item.title}</Text>
+        <Text style={{ fontSize: 13, color: '#1D1E20', fontWeight: '800' }}>{item.price}</Text>
       </View>
     )
   }
@@ -78,7 +125,7 @@ const HomeScreen = ({ navigation }) => {
           />
         </View>
 
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: '5%',alignItems:'center'  }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: '5%', alignItems: 'center' }}>
           <Text style={{ color: '#1D1E20', fontSize: 17, fontWeight: '500' }}>Choose Brand</Text>
           <TouchableOpacity>
             <Text style={{ color: '#8F959E', fontSize: 13 }}>View All</Text>
@@ -95,11 +142,20 @@ const HomeScreen = ({ navigation }) => {
           />
         </View>
 
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: '5%',alignItems:'center' }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: '5%', alignItems: 'center' }}>
           <Text style={{ color: '#1D1E20', fontSize: 17, fontWeight: '500' }}>New Arraival</Text>
           <TouchableOpacity>
             <Text style={{ color: '#8F959E', fontSize: 13 }}>View All</Text>
           </TouchableOpacity>
+        </View>
+
+        <View style={{ marginTop: '2%',marginBottom:100 }}>
+          <FlatList
+            data={Product}
+            renderItem={productList}
+            keyExtractor={(item) => item.id}
+            numColumns={2}
+          />
         </View>
       </View>
     </ScrollView>
