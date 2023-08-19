@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, FlatList, ImageBackground } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Searchbar } from 'react-native-paper';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import HeartComponent from '../../component/HeartComponent';
@@ -7,7 +7,8 @@ import HeartComponent from '../../component/HeartComponent';
 const HomeScreen = ({ navigation }) => {
 
   const [searchText, setSearchText] = useState('');
-  
+  const [storeProduct, setStoreProduct] = useState([]);
+
 
   const Brand = [
     {
@@ -60,6 +61,19 @@ const HomeScreen = ({ navigation }) => {
     },
   ];
 
+  useEffect(() => {
+    fetchData();
+  }, [])
+
+  const fetchData = () => {
+    fetch("https://fakestoreapi.com/products/category/women's clothing")
+      .then(res => res.json())
+      .then(responce => setStoreProduct(responce))
+
+      console.log('Responce Data :',storeProduct);
+  }
+
+
   const renderItem = ({ item }) => {
     return (
       <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', padding: 8, backgroundColor: '#F5F6FA', margin: 5, borderRadius: 10 }}>
@@ -77,10 +91,11 @@ const HomeScreen = ({ navigation }) => {
     return (
       <View style={{ width: '47.5%', marginTop: '2%', margin: 5 }}>
         <ImageBackground
-          source={item.image}
-          style={{ height: 200, width: '100%' }}
+          source={{uri:item.image}}
+          style={{ height: 200, width: '100%'}}
+          resizeMode='contain'
         >
-        <HeartComponent />
+          <HeartComponent />
         </ImageBackground>
         <Text style={{ fontSize: 12, color: '#1D1E20' }}>{item.title}</Text>
         <Text style={{ fontSize: 13, color: '#1D1E20', fontWeight: '800' }}>{item.price}</Text>
@@ -144,14 +159,14 @@ const HomeScreen = ({ navigation }) => {
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: '5%', alignItems: 'center' }}>
           <Text style={{ color: '#1D1E20', fontSize: 17, fontWeight: '500' }}>New Arraival</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>navigation.navigate('AllProduct')}>
             <Text style={{ color: '#8F959E', fontSize: 13 }}>View All</Text>
           </TouchableOpacity>
         </View>
 
-        <View style={{ marginTop: '2%',marginBottom:100 }}>
+        <View style={{ marginTop: '2%', marginBottom: 100 }}>
           <FlatList
-            data={Product}
+            data={storeProduct}
             renderItem={productList}
             keyExtractor={(item) => item.id}
             numColumns={2}
