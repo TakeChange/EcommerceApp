@@ -9,6 +9,8 @@ import LoginOption from '../screen/LoginOption'
 import SignIn from '../screen/SignIn'
 import SignUp from '../screen/SignUp'
 import AllProduct from '../screen/Main/AllProduct'
+import ProductDetails from '../screen/Main/ProductDetails'
+import ProductDescription from '../screen/Main/ProductDescription'
 
 const Demo = () => {
     return (
@@ -65,6 +67,18 @@ const AppNavigator = () => {
                 <Stack.Screen
                     name="AllProduct"
                     component={AllProduct}
+                    options={{ headerShown: false }}
+                />
+
+                <Stack.Screen
+                    name="ProductDetails"
+                    component={ProductDetails}
+                    options={{ headerShown: false }}
+                />
+
+                <Stack.Screen
+                    name="ProductDescription"
+                    component={ProductDescription}
                     options={{ headerShown: false }}
                 />
             </Stack.Navigator>

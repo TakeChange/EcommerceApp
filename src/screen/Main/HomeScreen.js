@@ -70,7 +70,7 @@ const HomeScreen = ({ navigation }) => {
       .then(res => res.json())
       .then(responce => setStoreProduct(responce))
 
-      console.log('Responce Data :',storeProduct);
+    console.log('Responce Data :', storeProduct);
   }
 
 
@@ -90,15 +90,18 @@ const HomeScreen = ({ navigation }) => {
 
     return (
       <View style={{ width: '47.5%', marginTop: '2%', margin: 5 }}>
-        <ImageBackground
-          source={{uri:item.image}}
-          style={{ height: 200, width: '100%'}}
-          resizeMode='contain'
-        >
-          <HeartComponent />
-        </ImageBackground>
-        <Text style={{ fontSize: 12, color: '#1D1E20' }}>{item.title}</Text>
-        <Text style={{ fontSize: 13, color: '#1D1E20', fontWeight: '800' }}>{item.price}</Text>
+        <TouchableOpacity onPress={()=>navigation.navigate('ProductDetails',{id:item.id})}>
+          <ImageBackground
+            source={{ uri: item.image }}
+            style={{ height: 200, width: '100%' }}
+            resizeMode='contain'
+          >
+            <HeartComponent />
+          </ImageBackground>
+          <Text style={{ fontSize: 12, color: '#1D1E20' }}>{item.title}</Text>
+          <Text style={{ fontSize: 13, color: '#1D1E20', fontWeight: '800' }}>{item.price}</Text>
+        </TouchableOpacity>
+        <Text>{item.id}</Text>
       </View>
     )
   }
@@ -159,7 +162,7 @@ const HomeScreen = ({ navigation }) => {
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: '5%', alignItems: 'center' }}>
           <Text style={{ color: '#1D1E20', fontSize: 17, fontWeight: '500' }}>New Arraival</Text>
-          <TouchableOpacity onPress={()=>navigation.navigate('AllProduct')}>
+          <TouchableOpacity onPress={() => navigation.navigate('AllProduct')}>
             <Text style={{ color: '#8F959E', fontSize: 13 }}>View All</Text>
           </TouchableOpacity>
         </View>
