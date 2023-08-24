@@ -11,6 +11,7 @@ import SignUp from '../screen/SignUp'
 import AllProduct from '../screen/Main/AllProduct'
 import ProductDetails from '../screen/Main/ProductDetails'
 import ProductDescription from '../screen/Main/ProductDescription'
+import AddReview from '../screen/Main/AddReview'
 
 const Demo = () => {
     return (
@@ -79,6 +80,12 @@ const AppNavigator = () => {
                 <Stack.Screen
                     name="ProductDescription"
                     component={ProductDescription}
+                    options={{ headerShown: false }}
+                />
+
+                <Stack.Screen
+                    name="AddReview"
+                    component={AddReview}
                     options={{ headerShown: false }}
                 />
             </Stack.Navigator>
