@@ -12,6 +12,7 @@ import AllProduct from '../screen/Main/AllProduct'
 import ProductDetails from '../screen/Main/ProductDetails'
 import ProductDescription from '../screen/Main/ProductDescription'
 import AddReview from '../screen/Main/AddReview'
+import Review from '../screen/Main/Review'
 
 const Demo = () => {
     return (
@@ -83,6 +84,11 @@ const AppNavigator = () => {
                     options={{ headerShown: false }}
                 />
 
+                <Stack.Screen
+                    name="Review"
+                    component={Review}
+                    options={{ headerShown: false }}
+                />
                 <Stack.Screen
                     name="AddReview"
                     component={AddReview}

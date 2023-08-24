@@ -103,7 +103,7 @@ const ProductDetails = ({ route, navigation }) => {
 
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: '8%', alignItems: 'center' }}>
                     <Text style={{ color: '#1D1E20', fontSize: 20, fontWeight: 'bold' }}>Review</Text>
-                    <TouchableOpacity onPress={()=>navigation.navigate('AddReview')}>
+                    <TouchableOpacity onPress={()=>navigation.navigate('Review')}>
                         <Text style={{ color: '#8F959E', fontSize: 14 }}>View All</Text>
                     </TouchableOpacity>
                 </View>
