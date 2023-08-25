@@ -103,45 +103,47 @@ const ProductDetails = ({ route, navigation }) => {
 
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: '8%', alignItems: 'center' }}>
                     <Text style={{ color: '#1D1E20', fontSize: 20, fontWeight: 'bold' }}>Review</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>navigation.navigate('Review')}>
                         <Text style={{ color: '#8F959E', fontSize: 14 }}>View All</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={{ flexDirection: 'row', marginTop: '4%' }}>
-                    <View>
+
+                <View style={{ flexDirection: 'row', marginTop: '5%', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <View  style={{ width: '50%',flexDirection: 'row',alignItems:'center' }}>
                         <Image
                             source={require('../../assets/images/manImg.png')}
-                            style={{ height: 60, width: 60, borderRadius: 50, marginTop: '20%' }}
+                            style={{ height: 60, width: 60, borderRadius: 50, }}
                         />
-                    </View>
 
-                    <View style={{ padding: 10, width: '50%' }}>
-                        <Text
-                            style={{
-                                color: 'black',
-                                fontSize: 15,
-                                fontFamily: 'Roboto-Medium',
 
-                                fontWeight: '800'
-                            }}>
-                            Ronald Richared
-                        </Text>
-                        <View style={{ flexDirection: 'row' }}>
-                        <Image
-                            source={require('../../assets/icon/watch.png')}
-                            style={{width:22,height:22,marginTop:'2%'}}
-                        />
+                        <View>
                             <Text
                                 style={{
-                                    color: '#8F959E',
-                                    fontFamily: 'Roboto-Regular',
-                                    fontWeight: '800'
-                                }}> 13 sep,2020
-                            </Text>
+                                    color: 'black',
+                                    fontSize: 15,
+                                    fontFamily: 'Roboto-Medium',
 
+                                    fontWeight: '800'
+                                }}>
+                                Ronald Richared
+                            </Text>
+                            <View style={{ flexDirection: 'row' }}>
+                                <Image
+                                    source={require('../../assets/icon/watch.png')}
+                                    style={{ width: 22, height: 22,}}
+                                />
+                                <Text
+                                    style={{
+                                        color: '#8F959E',
+                                        fontFamily: 'Roboto-Regular',
+                                        fontWeight: '800'
+                                    }}> 13 sep,2020
+                                </Text>
+
+                            </View>
                         </View>
                     </View>
-                    <View style={{ flexDirection: 'column', marginLeft: '10%', marginTop: 12, right: 13 }}>
+                    <View style={{ flexDirection: 'column' }}>
                         <Text
                             style={{
                                 color: 'black',
@@ -157,17 +159,17 @@ const ProductDetails = ({ route, navigation }) => {
                         </Text>
                         <Image
                             source={require('../../assets/images/star.png')}
-                            style={{ width: 120, marginBottom: 20, right: 5 }}
+                            style={{ width: '100%', height: 20, resizeMode: 'contain' }}
                         />
                     </View>
                 </View>
                 <Text
                     style={{ textAlign: 'justify', fontSize: 15, color: '#8F959E', marginTop: 10 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada eget vitae amet...</Text>
 
-                <View style={{ flexDirection: 'row', marginTop: '4%' }}>
+                <View style={{ flexDirection: 'row', marginTop: '4%',justifyContent:'space-between',marginTop:'5%' }}>
 
 
-                    <View style={{ padding: 10, width: '50%' }}>
+                    <View style={{ width: '50%' }}>
                         <Text
                             style={{
                                 color: 'black',
@@ -189,7 +191,7 @@ const ProductDetails = ({ route, navigation }) => {
 
                         </View>
                     </View>
-                    <View style={{ flexDirection: 'column', marginLeft: '30%', marginTop: 14, right: 13 }}>
+                    <View style={{ flexDirection: 'column',justifyContent:'center'}}>
                         <Text
                             style={{
                                 color: 'black',
@@ -200,7 +202,7 @@ const ProductDetails = ({ route, navigation }) => {
                         </Text>
                     </View>
                 </View>
-                <TouchableOpacity style={styles.bottomButton}>
+                <TouchableOpacity style={styles.bottomButton} onPress={()=>navigation.navigate('Address')}>
                     <Text style={styles.NewAcc}>Add to cart</Text>
                 </TouchableOpacity>
             </View>
@@ -215,9 +217,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#9775FA',
         borderRadius: 10,
         justifyContent: 'center',
-        marginTop: '3%',
+        marginTop: '8%',
         width: '100%',
-       
+        marginBottom: '10%'
     },
     NewAcc: {
         textAlign: 'center',
