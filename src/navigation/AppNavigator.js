@@ -13,11 +13,9 @@ import ProductDetails from '../screen/Main/ProductDetails'
 import ProductDescription from '../screen/Main/ProductDescription'
 import AddReview from '../screen/Main/AddReview'
 import Review from '../screen/Main/Review'
-<<<<<<< HEAD
 import AddNewCard from '../screen/AddNewCard'
-=======
 import Address from '../screen/Address'
->>>>>>> 1ac42efeb4def05725878a7b1d0c152e5fc6b63a
+
 
 const Demo = () => {
     return (
@@ -100,15 +98,14 @@ const AppNavigator = () => {
                     options={{ headerShown: false }}
                 />
                  <Stack.Screen
-<<<<<<< HEAD
-                name="AddNewCard"
-                component={AddNewCard}
-               options={{headerShown:false}}
-=======
                     name="Address"
                     component={Address}
                     options={{ headerShown: false }}
->>>>>>> 1ac42efeb4def05725878a7b1d0c152e5fc6b63a
+                />
+                <Stack.Screen
+                    name="AddNewCard"
+                    component={AddNewCard}
+                    options={{ headerShown: false }}
                 />
             </Stack.Navigator>
 
