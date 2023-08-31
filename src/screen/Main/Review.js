@@ -31,7 +31,7 @@ const Review = ({ route, navigation }) => {
                                 textAlign:'center'
                             }}>4.8</Text>
                     <Image
-                                source={require('../../assets/images/star.png')}
+                                source={require('../../asse/images/star.png')}
                                 style={{width: '100%', height: 20,}}
                             />
                     </View>
