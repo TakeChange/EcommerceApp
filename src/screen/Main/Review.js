@@ -22,8 +22,20 @@ const Review = ({ route, navigation }) => {
 
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', }}>
-                    <Text style={{ fontWeight: '900', color: 'black' }}>245 Reviews</Text>
-
+                <View>
+                    <Text style={{ fontWeight: '900', fontSize:17,color: 'black' }}>245 Reviews</Text>
+                    <View style={{flexDirection:'row', width: '47%', height: 20, }}>
+                    <Text  style={{
+                                color: 'black',
+                                fontWeight: 'bold',
+                                textAlign:'center'
+                            }}>4.8</Text>
+                    <Image
+                                source={require('../../assets/images/star.png')}
+                                style={{width: '100%', height: 20,}}
+                            />
+                    </View>
+                </View>
 
                     <TouchableOpacity onPress={() => navigation.navigate('AddReview')}>
                         <Image

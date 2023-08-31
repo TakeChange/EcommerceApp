@@ -70,7 +70,7 @@ const AddNewCard = ({ navigation }) => {
 
                 <TouchableOpacity style={styles.bottomButton}
                     onPress={() => navigation.navigate('')}>
-                    <Text style={styles.NewAcc}>Add to cart</Text>
+                    <Text style={styles.NewAcc}>Add Cart</Text>
                 </TouchableOpacity>
             </View>
         </ScrollView>
