@@ -10,8 +10,8 @@ const AddNewCard = ({ navigation }) => {
                     <TouchableOpacity onPress={() => navigation.navigate('ProductDetails')}>
                         <View style={{ justifyContent: 'space-around' }}>
                             <Image
-                                source={require('../asse/icon/back.png')}
-                                style={{ width: 50, height: 50 }}
+                                source={require('../asse/icon/BackImg.png')}
+                                style={{ width: 50, height: 50,borderRadius:50}}
                             />
 
                         </View>
