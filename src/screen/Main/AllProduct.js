@@ -68,7 +68,7 @@ const AllProduct = () => {
         <ScrollView style={{ flex: 1, backgroundColor: '#fff' }}>
             <View >
                 <Image
-                    source={require('../../assets/images/bannerImage.jpg')}
+                    source={require('../../asse/images/bannerImage.jpg')}
                     style={{ width: '100%', height: 200, }}
                 />
 

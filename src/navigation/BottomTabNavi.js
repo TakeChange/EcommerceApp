@@ -3,7 +3,7 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import HomeScreen from '../screen/Main/HomeScreen';
 import Wishlist from '../screen/Main/Wishlist';
-import Order from '../screen/Main/Order';
+import Order from '../screen/Main/Cart';
 import MyCards from '../screen/Main/MyCards';
 
 const Tab = createBottomTabNavigator();
@@ -38,7 +38,7 @@ const BottomTabNavi = () => {
                                 <Text style={{ fontSize: 12, color: '#9775FA', fontWeight: '700' }}>Home</Text>
                                 :
                                 <Image
-                                    source={require('../assets/icon/home1.png')}
+                                    source={require('../asse/icon/home1.png')}
                                     style={{ width: 25, height: 25 }}
                                 />
                             }
@@ -58,7 +58,7 @@ const BottomTabNavi = () => {
                                 <Text style={{ fontSize: 12, color: '#9775FA', fontWeight: '700' }}>Wishlist</Text>
                                 :
                                 <Image
-                                    source={require('../assets/icon/heart1.png')}
+                                    source={require('../asse/icon/heart1.png')}
                                     style={{ width: 25, height: 25 }}
                                 />
                             }
@@ -75,10 +75,10 @@ const BottomTabNavi = () => {
                     tabBarIcon: ({ focused }) => (
                         <View>
                             {focused ?
-                                <Text style={{ fontSize: 12, color: '#9775FA', fontWeight: '700' }}>Order</Text>
+                                <Text style={{ fontSize: 12, color: '#9775FA', fontWeight: '700' }}>Cart</Text>
                                 :
                                 <Image
-                                    source={require('../assets/icon/bag.png')}
+                                    source={require('../asse/icon/bag.png')}
                                     style={{ width: 25, height: 25 }}
                                 />
                             }
@@ -98,7 +98,7 @@ const BottomTabNavi = () => {
                                 <Text style={{ fontSize: 12, color: '#9775FA', fontWeight: '700' }}>MyCard</Text>
                                 :
                                 <Image
-                                    source={require('../assets/icon/pocket.png')}
+                                    source={require('../asse/icon/pocket.png')}
                                     style={{ width: 25, height: 25 }}
                                 />
                             }

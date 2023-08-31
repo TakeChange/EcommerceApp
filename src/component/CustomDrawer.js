@@ -31,7 +31,7 @@ const CustomDrawer = (props) => {
                 <View>
                     <TouchableOpacity style={styles.closeButton} onPress={() => navigation.closeDrawer()}>
                         <Image
-                            source={require('../assets/icon/CloseDrawer.png')}
+                            source={require('../asse/icon/CloseDrawer.png')}
                             style={styles.closeImage}
                         />
                     </TouchableOpacity>
@@ -40,7 +40,7 @@ const CustomDrawer = (props) => {
                 <View style={{ flexDirection: 'row', marginTop: '5%' }}>
                     <View>
                         <Image
-                            source={require('../assets/images/user-profile.jpg')}
+                            source={require('../asse/images/user-profile.jpg')}
                             style={{ height: 50, width: 50, borderRadius: 50, marginTop: '20%' }}
                         />
                     </View>
@@ -66,7 +66,7 @@ const CustomDrawer = (props) => {
                                 Verified Profile
                             </Text>
                             <Image
-                                source={require('../assets/images/confirm.png')}
+                                source={require('../asse/images/confirm.png')}
                                 style={{ height: 20, width: 20, borderRadius: 20 }}
                             />
                         </View>
@@ -80,7 +80,7 @@ const CustomDrawer = (props) => {
                 <View>
                     <View style={{ flexDirection: 'row', margin: '6%', marginTop: '14%', alignItems: 'center', }}>
                         <Image
-                            source={require('../assets/icon/dark.png')}
+                            source={require('../asse/icon/dark.png')}
                             style={{ width: 25, height: 25 }}
                         />
                         <Text style={{ fontSize: 15, color: '#1D1E20', marginLeft: '6%' }}>Dark Mode</Text>

@@ -1,7 +1,6 @@
 import { View, Text, ScrollView, ImageBackground, Image, TouchableOpacity, StyleSheet } from 'react-native'
 import React, { useEffect, useState } from 'react'
 
-
 const Review = ({ route, navigation }) => {
     const [data, setData] = useState([])
     return (
@@ -10,9 +9,9 @@ const Review = ({ route, navigation }) => {
 
                 <View style={{ width: '65%', flexDirection: 'row', marginTop: '5%', justifyContent: 'space-between',alignItems: 'center' }}>
 
-                    <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('ProductDetails')}>
                         <Image
-                            source={require('../../assets/icon/back.png')}
+                            source={require('../../asse/icon/back.png')}
                             style={{ width: 50, height: 50, }}
                         />
 
@@ -28,7 +27,7 @@ const Review = ({ route, navigation }) => {
 
                     <TouchableOpacity onPress={() => navigation.navigate('AddReview')}>
                         <Image
-                            source={require('../../assets/images/addReview.png')}
+                            source={require('../../asse/images/addReview.png')}
                             style={{ width: 120, height: 40, borderRadius: 8, }}
                         />
                     </TouchableOpacity>
@@ -37,7 +36,7 @@ const Review = ({ route, navigation }) => {
                 <View style={{ flexDirection: 'row', marginTop: '4%', alignItems: 'center', justifyContent: 'space-between' }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center', width: '5%' }}>
                         <Image
-                            source={require('../../assets/images/manImg.png')}
+                            source={require('../../asse/images/manImg.png')}
                             style={{ height: 50, width: 50, borderRadius: 50, marginTop: '20%' }}
                         />
                     </View>
@@ -54,7 +53,7 @@ const Review = ({ route, navigation }) => {
                         </Text>
                         <View style={{ flexDirection: 'row' }}>
                             <Image
-                                source={require('../../assets/icon/watch.png')}
+                                source={require('../../asse/icon/watch.png')}
                                 style={{ width: 15, height: 15, marginTop: 2 }}
                             />
                             <Text
@@ -85,7 +84,7 @@ const Review = ({ route, navigation }) => {
                         </Text>
                         <TouchableOpacity>
                             <Image
-                                source={require('../../assets/images/star.png')}
+                                source={require('../../asse/images/star.png')}
                                 style={{ width: '100%', height: 20, resizeMode: 'contain' }}
                             />
                         </TouchableOpacity>
@@ -99,7 +98,7 @@ const Review = ({ route, navigation }) => {
                 <View style={{ flexDirection: 'row', marginTop: '4%', alignItems: 'center', justifyContent: 'space-between' }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center', width: '5%' }}>
                         <Image
-                            source={require('../../assets/images/ReviewImage/r1.png')}
+                            source={require('../../asse/images/ReviewImage/r1.png')}
                             style={{ height: 50, width: 50, borderRadius: 50, marginTop: '20%' }}
                         />
                     </View>
@@ -115,7 +114,7 @@ const Review = ({ route, navigation }) => {
                         </Text>
                         <View style={{ flexDirection: 'row' }}>
                             <Image
-                                source={require('../../assets/icon/watch.png')}
+                                source={require('../../asse/icon/watch.png')}
                                 style={{ width: 15, height: 15, marginTop: 2 }}
                             />
                             <Text
@@ -146,7 +145,7 @@ const Review = ({ route, navigation }) => {
                         </Text>
                         <TouchableOpacity>
                             <Image
-                                source={require('../../assets/images/star.png')}
+                                source={require('../../asse/images/star.png')}
                                 style={{ width: '100%', height: 20, resizeMode: 'contain' }}
                             />
                         </TouchableOpacity>
@@ -159,7 +158,7 @@ const Review = ({ route, navigation }) => {
                 <View style={{ flexDirection: 'row', marginTop: '4%', alignItems: 'center', justifyContent: 'space-between' }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center', width: '5%' }}>
                         <Image
-                            source={require('../../assets/images/ReviewImage/r2.png')}
+                            source={require('../../asse/images/ReviewImage/r2.png')}
                             style={{ height: 50, width: 50, borderRadius: 50, marginTop: '20%' }}
                         />
                     </View>
@@ -175,7 +174,7 @@ const Review = ({ route, navigation }) => {
                         </Text>
                         <View style={{ flexDirection: 'row' }}>
                             <Image
-                                source={require('../../assets/icon/watch.png')}
+                                source={require('../../asse/icon/watch.png')}
                                 style={{ width: 15, height: 15, marginTop: 2 }}
                             />
                             <Text
@@ -205,7 +204,7 @@ const Review = ({ route, navigation }) => {
                         </Text>
                         <TouchableOpacity>
                             <Image
-                                source={require('../../assets/images/star.png')}
+                                source={require('../../asse/images/star.png')}
                                 style={{ width: '100%', height: 20, resizeMode: 'contain' }}
                             />
                         </TouchableOpacity>
@@ -217,7 +216,7 @@ const Review = ({ route, navigation }) => {
                 <View style={{ flexDirection: 'row', marginTop: '4%', alignItems: 'center', justifyContent: 'space-between' }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center', width: '5%' }}>
                         <Image
-                            source={require('../../assets/images/ReviewImage/r3.png')}
+                            source={require('../../asse/images/ReviewImage/r3.png')}
                             style={{ height: 50, width: 50, borderRadius: 50, marginTop: '20%' }}
                         />
                     </View>
@@ -233,7 +232,7 @@ const Review = ({ route, navigation }) => {
                         </Text>
                         <View style={{ flexDirection: 'row' }}>
                             <Image
-                                source={require('../../assets/icon/watch.png')}
+                                source={require('../../asse/icon/watch.png')}
                                 style={{ width: 15, height: 15, marginTop: 2 }}
                             />
                             <Text
@@ -263,7 +262,7 @@ const Review = ({ route, navigation }) => {
                         </Text>
                         <TouchableOpacity>
                             <Image
-                                source={require('../../assets/images/star.png')}
+                                source={require('../../asse/images/star.png')}
                                 style={{ width: '100%', height: 20, resizeMode: 'contain' }}
                             />
                         </TouchableOpacity>

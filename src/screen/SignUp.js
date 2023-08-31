@@ -83,7 +83,7 @@ const SignUp = ({ navigation }) => {
             <View style={styles.container}>
                 <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('LoginOption')}>
                     <Image
-                        source={require('../assets/icon/back.png')}
+                        source={require('../asse/icon/back.png')}
                         style={{width:40,height:40}}
                     />
                 </TouchableOpacity>

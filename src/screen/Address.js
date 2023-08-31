@@ -16,7 +16,7 @@ const Address = () => {
                 }}>
                     <TouchableOpacity>
                         <Image
-                            source={require('../assets/icon/back.png')}
+                            source={require('../asse/icon/back.png')}
                             style={{ width: 50, height: 50 }}
                         />
                     </TouchableOpacity>
