@@ -8,7 +8,7 @@ const ProductDescription = ({ route,navigation }) => {
             <View style={{ width: '14%' }}>
                         <TouchableOpacity onPress={() => navigation.navigate('ProductDetails')}>
                             <Image
-                                source={require('../../assets/icon/back.png')}
+                                source={require('../../asse/icon/back.png')}
                                 style={{ width: 50, height: 50 }}
                             />
                         </TouchableOpacity>

@@ -15,7 +15,7 @@ import AddReview from '../screen/Main/AddReview'
 import Review from '../screen/Main/Review'
 import AddNewCard from '../screen/AddNewCard'
 import Address from '../screen/Address'
-
+import NikeBrand from '../screen/Main/NikeBrand'
 
 const Demo = () => {
     return (
@@ -38,55 +38,46 @@ const AppNavigator = () => {
                     component={SplashScreen}
                     options={{ headerShown: false }}
                 />
-
                 <Stack.Screen
                     name='DrawerNavigation'
                     component={DrawerNavigation}
                     options={{ headerShown: false }}
                 />
-
                 <Stack.Screen
                     name="FirstScreen"
                     component={FirstScreen}
                     options={{ headerShown: false }}
                 />
-
                 <Stack.Screen
                     name="LoginOption"
                     component={LoginOption}
                     options={{ headerShown: false }}
                 />
-
                 <Stack.Screen
                     name="SignIn"
                     component={SignIn}
                     options={{ headerShown: false }}
                 />
-
                 <Stack.Screen
                     name="SignUp"
                     component={SignUp}
                     options={{ headerShown: false }}
                 />
-
                 <Stack.Screen
                     name="AllProduct"
                     component={AllProduct}
                     options={{ headerShown: false }}
                 />
-
                 <Stack.Screen
                     name="ProductDetails"
                     component={ProductDetails}
                     options={{ headerShown: false }}
                 />
-
                 <Stack.Screen
                     name="ProductDescription"
                     component={ProductDescription}
                     options={{ headerShown: false }}
                 />
-
                 <Stack.Screen
                     name="Review"
                     component={Review}
@@ -97,7 +88,7 @@ const AppNavigator = () => {
                     component={AddReview}
                     options={{ headerShown: false }}
                 />
-                 <Stack.Screen
+                <Stack.Screen
                     name="Address"
                     component={Address}
                     options={{ headerShown: false }}
@@ -107,10 +98,13 @@ const AppNavigator = () => {
                     component={AddNewCard}
                     options={{ headerShown: false }}
                 />
+                <Stack.Screen
+                    name="NikeBrand"
+                    component={NikeBrand}
+                    options={{ headerShown: false }}
+                />
             </Stack.Navigator>
-
         </NavigationContainer>
     )
 }
-
 export default AppNavigator

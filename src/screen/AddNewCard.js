@@ -10,8 +10,8 @@ const AddNewCard = ({ navigation }) => {
                     <TouchableOpacity onPress={() => navigation.navigate('ProductDetails')}>
                         <View style={{ justifyContent: 'space-around' }}>
                             <Image
-                                source={require('../assets/icon/back.png')}
-                                style={{ width: 50, height: 50 }}
+                                source={require('../asse/icon/BackImg.png')}
+                                style={{ width: 50, height: 50,borderRadius:50}}
                             />
 
                         </View>
@@ -20,15 +20,15 @@ const AddNewCard = ({ navigation }) => {
                 </View>
                 <View style={{ flexDirection: 'row', marginTop: '10%', justifyContent: 'space-between' }}>
                     <Image
-                        source={require('../assets/images/card1.png')}
+                        source={require('../asse/images/card1.png')}
                         style={{ width: 103, height: 52, }}
                     />
                     <Image
-                        source={require('../assets/images/card2.png')}
+                        source={require('../asse/images/card2.png')}
                         style={{ width: 103, height: 55, borderRadius: 8 }}
                     />
                     <Image
-                        source={require('../assets/images/card3.png')}
+                        source={require('../asse/images/card3.png')}
                         style={{ width: 103, height: 55, borderRadius: 8 }}
                     />
                 </View>
@@ -70,7 +70,7 @@ const AddNewCard = ({ navigation }) => {
 
                 <TouchableOpacity style={styles.bottomButton}
                     onPress={() => navigation.navigate('')}>
-                    <Text style={styles.NewAcc}>Add to cart</Text>
+                    <Text style={styles.NewAcc}>Add Cart</Text>
                 </TouchableOpacity>
             </View>
         </ScrollView>
