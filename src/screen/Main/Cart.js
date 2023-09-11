@@ -10,12 +10,12 @@ const Cart = ({ navigation }) => {
     {
       id: '1',
       title: 'Mens Tie-Dye T-Shirt Nike Sportswear',
-      image: require('../../asse/images/cartimg1.png')
+      image: require('../../assets/images/cartimg1.png')
     },
     {
       id: '2',
       title: 'Mens Tie-Dye T-Shirt Nike Sportswear',
-      image: require('../../asse/images/cartimg2.png')
+      image: require('../../assets/images/cartimg2.png')
     },
    
  
@@ -43,7 +43,7 @@ const Cart = ({ navigation }) => {
             <TouchableOpacity onPress={Decrement}>
               <View style={{ backgroundColor: '#FFFFFF', padding: 8, borderColor: '#DEDEDE', borderWidth: 1, borderRadius: 30 }}>
                 <Image
-                  source={require('../../asse/images/ArrowDown.png')}
+                  source={require('../../assets/images/ArrowDown.png')}
                   style={{ width: 18, height: 18, resizeMode: 'contain', borderRadius: 20, }}
 
                 />
@@ -53,7 +53,7 @@ const Cart = ({ navigation }) => {
             <TouchableOpacity onPress={Increment}>
               <View style={{ backgroundColor: '#FFFFFF', padding: 8, borderColor: '#DEDEDE', borderWidth: 1, borderRadius: 30 }}>
                 <Image
-                  source={require('../../asse/images/ArrowUp.png')}
+                  source={require('../../assets/images/ArrowUp.png')}
                   style={{ width: 18, height: 18, resizeMode: 'contain', borderRadius: 20, }}
                 />
               </View>
@@ -62,7 +62,7 @@ const Cart = ({ navigation }) => {
             <TouchableOpacity>
               <View style={{ backgroundColor: '#FFFFFF', padding: 8, borderColor: '#DEDEDE', borderWidth: 1, borderRadius: 30, marginHorizontal: 50 }}>
                 <Image
-                  source={require('../../asse/images/delete.png')}
+                  source={require('../../assets/images/delete.png')}
                   style={{ width: 18, height: 18, resizeMode: 'contain', borderRadius: 20, }}
                 />
               </View>
@@ -80,7 +80,7 @@ const Cart = ({ navigation }) => {
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
           <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
             <Image
-              source={require('../../asse/icon/back.png')}
+              source={require('../../assets/icon/back.png')}
               style={{ width: 45, height: 45, borderRadius: 55 }}
             />
 
@@ -102,14 +102,14 @@ const Cart = ({ navigation }) => {
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 20 ,}}>
           <Text style={{ color: 'black', fontSize: 18, fontWeight: '500' }}>Delivery Address</Text>
           <Image
-            source={require('../../asse/images/ArrowLeft.png')}
+            source={require('../../assets/images/ArrowLeft.png')}
             style={{ width: 25, height: 25, resizeMode: 'contain', borderRadius: 20, }}
           />
         </View>
 
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: '6%' }}>
           <ImageBackground
-            source={require('../../asse/images/Map.png')}
+            source={require('../../assets/images/Map.png')}
             style={{ width: 80, height: 80, resizeMode: 'contain', borderRadius: 80, }}
           />
           <View style={{ width: '60%' ,marginLeft:'5%'}}>
@@ -117,7 +117,7 @@ const Cart = ({ navigation }) => {
             <Text style={{ fontSize: 13, fontWeight: '500' }}>Sylhet</Text>
           </View>
           <Image
-            source={require('../../asse/images/check.png')}
+            source={require('../../assets/images/check.png')}
             style={{ width: 40, height: 40, resizeMode: 'contain', borderRadius: 40, }}
           />
         </View>
@@ -125,14 +125,14 @@ const Cart = ({ navigation }) => {
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 20 }}>
           <Text style={{ color: 'black', fontSize: 18, fontWeight: '500' }}>Payment Method</Text>
           <Image
-            source={require('../../asse/images/ArrowLeft.png')}
+            source={require('../../assets/images/ArrowLeft.png')}
             style={{ width: 25, height: 25, resizeMode: 'contain', borderRadius: 20, }}
           />
         </View>
 
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: '6%' }}>
           <ImageBackground
-            source={require('../../asse/images/visa2.png')}
+            source={require('../../assets/images/visa2.png')}
             style={{ width: 70, height: 70, resizeMode: 'contain', borderRadius: 7, }}
           />
           <View style={{ width: '60%',marginLeft:'5%' }}>
@@ -140,7 +140,7 @@ const Cart = ({ navigation }) => {
             <Text style={{ fontSize: 13, fontWeight: '500' }}>****7690</Text>
           </View>
           <Image
-            source={require('../../asse/images/check.png')}
+            source={require('../../assets/images/check.png')}
             style={{ width: 40, height: 40, resizeMode: 'contain', borderRadius: 40, }}
           />
         </View>

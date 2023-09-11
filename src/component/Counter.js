@@ -19,7 +19,7 @@ const Counter = () => {
             <TouchableOpacity onPress={Decrement}>
                 <View style={{ backgroundColor: '#FFFFFF', padding: 8, borderColor: '#DEDEDE', borderWidth: 1, borderRadius: 30 }}>
                     <Image
-                        source={require('../asse/images/ArrowDown.png')}
+                        source={require('../assets/images/ArrowDown.png')}
                         style={{ width: 18, height: 18, resizeMode: 'contain', borderRadius: 20, }}
 
                     />
@@ -29,7 +29,7 @@ const Counter = () => {
             <TouchableOpacity onPress={Increment}>
                 <View style={{ backgroundColor: '#FFFFFF', padding: 8, borderColor: '#DEDEDE', borderWidth: 1, borderRadius: 30 }}>
                     <Image
-                        source={require('../asse/images/ArrowUp.png')}
+                        source={require('../assets/images/ArrowUp.png')}
                         style={{ width: 18, height: 18, resizeMode: 'contain', borderRadius: 20, }}
                     />
                 </View>

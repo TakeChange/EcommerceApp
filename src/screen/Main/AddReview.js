@@ -12,7 +12,7 @@ const AddReview = ({ navigation }) => {
                 <View style={{ flexDirection: 'row', alignItems: 'center', }}>
                     <TouchableOpacity onPress={() => navigation.navigate('Review')}>
                         <Image
-                            source={require('../../asse/icon/back.png')}
+                            source={require('../../assets/icon/back.png')}
                             style={{ width: 50, height: 50, }}
                         />
                     </TouchableOpacity>

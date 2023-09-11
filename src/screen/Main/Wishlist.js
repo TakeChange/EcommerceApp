@@ -11,38 +11,38 @@ const Wishlist = ({ navigation }) => {
     {
       id: '2',
       title: 'Nike Sportswear Club Fleece',
-      image: require('../../asse/ProductImg/i1.png'),
+      image: require('../../assets/ProductImg/i1.png'),
       price: '$99'
 
     },
     {
       id: '2',
       title: 'Trail Running Jacket Nike Windrunner',
-      image: require('../../asse/ProductImg/i2.png'),
+      image: require('../../assets/ProductImg/i2.png'),
       price: '$99'
     },
     {
       id: '2',
       title: 'Training Top Nike Sport Clash',
-      image: require('../../asse/ProductImg/i3.png'),
+      image: require('../../assets/ProductImg/i3.png'),
       price: '$99'
     },
     {
       id: '3',
       title: 'Trail Running Jacket Nike Windrunner',
-      image: require('../../asse/ProductImg/i4.png'),
+      image: require('../../assets/ProductImg/i4.png'),
       price: '$99'
     },
     {
       id: '2',
       title: 'Training Top Nike Sport Clash',
-      image: require('../../asse/ProductImg/i3.png'),
+      image: require('../../assets/ProductImg/i3.png'),
       price: '$99'
     },
     {
       id: '1',
       title: 'Trail Running Jacket Nike Windrunner',
-      image: require('../../asse/ProductImg/i4.png'),
+      image: require('../../assets/ProductImg/i4.png'),
       price: '$99'
     },
   ];
@@ -73,7 +73,7 @@ const Wishlist = ({ navigation }) => {
           <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: '8%' }}>
             <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
               <Image
-                source={require('../../asse/icon/back.png')}
+                source={require('../../assets/icon/back.png')}
                 style={{ width: 45, height: 45, borderRadius: 55 }}
               />
 
@@ -82,7 +82,7 @@ const Wishlist = ({ navigation }) => {
             <Text></Text>
             <TouchableOpacity>
               <Image
-                source={require('../../asse/icon/BagImg.png')}
+                source={require('../../assets/icon/BagImg.png')}
                 style={{ width: 45, height: 45, borderRadius: 50 }}
               />
             </TouchableOpacity>
@@ -97,7 +97,7 @@ const Wishlist = ({ navigation }) => {
             </View>
             <TouchableOpacity>
               <Image
-                source={require('../../asse/icon/Edit.jpg')}
+                source={require('../../assets/icon/Edit.jpg')}
                 style={{ width: 80, height: 40, borderRadius: 8, }}
               />
             </TouchableOpacity>

@@ -5,11 +5,11 @@ const FirstScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require('../asse/images/s_background.png')}
+        source={require('../assets/images/s_background.png')}
         style={styles.imageStyle}
       >
         <ImageBackground
-          source={require('../asse/images/manImage.png')}
+          source={require('../assets/images/manImage.png')}
           style={styles.image}
         >
           <View style={styles.subContainer}>

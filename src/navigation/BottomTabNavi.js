@@ -38,7 +38,7 @@ const BottomTabNavi = () => {
                                 <Text style={{ fontSize: 12, color: '#9775FA', fontWeight: '700' }}>Home</Text>
                                 :
                                 <Image
-                                    source={require('../asse/icon/home1.png')}
+                                    source={require('../assets/icon/home1.png')}
                                     style={{ width: 25, height: 25 }}
                                 />
                             }
@@ -58,7 +58,7 @@ const BottomTabNavi = () => {
                                 <Text style={{ fontSize: 12, color: '#9775FA', fontWeight: '700' }}>Wishlist</Text>
                                 :
                                 <Image
-                                    source={require('../asse/icon/heart1.png')}
+                                    source={require('../assets/icon/heart1.png')}
                                     style={{ width: 25, height: 25 }}
                                 />
                             }
@@ -78,7 +78,7 @@ const BottomTabNavi = () => {
                                 <Text style={{ fontSize: 12, color: '#9775FA', fontWeight: '700' }}>Cart</Text>
                                 :
                                 <Image
-                                    source={require('../asse/icon/bag.png')}
+                                    source={require('../assets/icon/bag.png')}
                                     style={{ width: 25, height: 25 }}
                                 />
                             }
@@ -98,7 +98,7 @@ const BottomTabNavi = () => {
                                 <Text style={{ fontSize: 12, color: '#9775FA', fontWeight: '700' }}>MyCard</Text>
                                 :
                                 <Image
-                                    source={require('../asse/icon/pocket.png')}
+                                    source={require('../assets/icon/pocket.png')}
                                     style={{ width: 25, height: 25 }}
                                 />
                             }

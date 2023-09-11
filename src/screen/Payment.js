@@ -5,10 +5,10 @@ import ToggleSwitch from 'toggle-switch-react-native';
 const Payment = () => {
     const card = [
         {
-            image: require('../asse/images/visacard1.png')
+            image: require('../assets/images/visacard1.png')
         },
         {
-            image: require('../asse/images/visacard2.png')
+            image: require('../assets/images/visacard2.png')
         }
     ];
 
@@ -32,7 +32,7 @@ const Payment = () => {
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <TouchableOpacity style={{ borderRadius: 50 / 2 }}>
                         <Image
-                            source={require('../asse/icon/back.png')}
+                            source={require('../assets/icon/back.png')}
                             style={{ width: 50, height: 50 }}
                         />
                     </TouchableOpacity>
@@ -51,7 +51,7 @@ const Payment = () => {
                 <View>
                     <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', backgroundColor: '#F6F2FF', borderColor: '#9775FA', borderWidth: 2, borderRadius: 10, padding: 12 }}>
                         <Image
-                            source={require('../../src/asse/icon/add.jpg')}
+                            source={require('../../src/assets/icon/add.jpg')}
                             style={{ width: 20, height: 20 }}
                         />
                         <Text style={{ color: '#9775FA', fontSize: 14, fontWeight: '500' }}> Add new card</Text>

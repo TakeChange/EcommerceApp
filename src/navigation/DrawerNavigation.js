@@ -23,7 +23,7 @@ const DrawerNavigation = () => {
           title: 'Account Information',
           drawerIcon: ({ focused, size }) => (
             <Image
-              source={require('../asse/icon/about.png')}
+              source={require('../assets/icon/about.png')}
               style={{ height: 25, width: 25, marginRight: -20 }}
             />
           ),
@@ -38,7 +38,7 @@ const DrawerNavigation = () => {
           title: 'Password',
           drawerIcon: ({ focused, size }) => (
             <Image
-              source={require('../asse/icon/lock.png')}
+              source={require('../assets/icon/lock.png')}
               style={{ height: 25, width: 25, marginRight: -20 }}
             />
           ),
@@ -53,7 +53,7 @@ const DrawerNavigation = () => {
           title: 'Order',
           drawerIcon: ({ focused, size }) => (
             <Image
-              source={require('../asse/icon/bag.png')}
+              source={require('../assets/icon/bag.png')}
               style={{ height: 25, width: 25, marginRight: -20 }}
             />
           ),
@@ -68,7 +68,7 @@ const DrawerNavigation = () => {
           title: 'MyCards',
           drawerIcon: ({ focused, size }) => (
             <Image
-              source={require('../asse/icon/pocket.png')}
+              source={require('../assets/icon/pocket.png')}
               style={{ height: 25, width: 25, marginRight: -20 }}
             />
           ),
@@ -83,7 +83,7 @@ const DrawerNavigation = () => {
           title: 'Wishlist',
           drawerIcon: ({ focused, size }) => (
             <Image
-              source={require('../asse/icon/heart1.png')}
+              source={require('../assets/icon/heart1.png')}
               style={{ height: 25, width: 25, marginRight: -20 }}
             />
           ),
@@ -98,7 +98,7 @@ const DrawerNavigation = () => {
           title: 'Setting',
           drawerIcon: ({ focused, size }) => (
             <Image
-              source={require('../asse/icon/setting1.png')}
+              source={require('../assets/icon/setting1.png')}
               style={{ height: 25, width: 25, marginRight: -20 }}
             />
           ),
