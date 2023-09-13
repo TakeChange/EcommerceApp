@@ -14,22 +14,22 @@ const HomeScreen = ({ navigation }) => {
     {
       id: '1',
       title: 'Adidas',
-      image: require('../../asse/images/adi.png')
+      image: require('../../assets/images/adi.png')
     },
     {
       id: '2',
       title: 'Nike',
-      image: require('../../asse/images/nike.png')
+      image: require('../../assets/images/nike.png')
     },
     {
       id: '3',
       title: 'Fila',
-      image: require('../../asse/images/fila.png')
+      image: require('../../assets/images/fila.png')
     },
     {
       id: '4',
       title: 'Puma',
-      image: require('../../asse/images/puma.png')
+      image: require('../../assets/images/puma.png')
     },
   ];
 
@@ -37,26 +37,26 @@ const HomeScreen = ({ navigation }) => {
     {
       id: '1',
       title: 'Nike Sportswear Club Fleece',
-      image: require('../../asse/ProductImg/i1.png'),
+      image: require('../../assets/ProductImg/i1.png'),
       price: '$99'
 
     },
     {
       id: '2',
       title: 'Trail Running Jacket Nike Windrunner',
-      image: require('../../asse/ProductImg/i2.png'),
+      image: require('../../assets/ProductImg/i2.png'),
       price: '$101'
     },
     {
       id: '3',
       title: 'Training Top Nike Sport Clash',
-      image: require('../../asse/ProductImg/i3.png'),
+      image: require('../../assets/ProductImg/i3.png'),
       price: '$48'
     },
     {
       id: '4',
       title: 'Trail Running Jacket Nike Windrunner',
-      image: require('../../asse/ProductImg/i4.png'),
+      image: require('../../assets/ProductImg/i4.png'),
       price: '$78'
     },
   ];
@@ -119,14 +119,14 @@ const HomeScreen = ({ navigation }) => {
         <View style={styles.headerView}>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <Image
-              source={require('../../asse/icon/openDrawer.png')}
+              source={require('../../assets/icon/openDrawer.png')}
               style={styles.iconStyle}
             />
           </TouchableOpacity>
 
           <TouchableOpacity>
             <Image
-              source={require('../../asse/icon/BagImg.png')}
+              source={require('../../assets/icon/BagImg.png')}
               style={styles.iconStyle}
             />
           </TouchableOpacity>
@@ -143,7 +143,7 @@ const HomeScreen = ({ navigation }) => {
             style={styles.searchStyle}
           />
           <Image
-            source={require('../../asse/icon/mike.png')}
+            source={require('../../assets/icon/mike.png')}
             style={{ width: 50, height: 50 }}
           />
         </View>

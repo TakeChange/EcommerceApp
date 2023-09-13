@@ -10,7 +10,7 @@ const AddNewCard = ({ navigation }) => {
                     <TouchableOpacity onPress={() => navigation.navigate('ProductDetails')}>
                         <View style={{ justifyContent: 'space-around' }}>
                             <Image
-                                source={require('../asse/icon/BackImg.png')}
+                                source={require('../assets/icon/BackImg.png')}
                                 style={{ width: 50, height: 50,borderRadius:50}}
                             />
 
@@ -20,15 +20,15 @@ const AddNewCard = ({ navigation }) => {
                 </View>
                 <View style={{ flexDirection: 'row', marginTop: '10%', justifyContent: 'space-between' }}>
                     <Image
-                        source={require('../asse/images/card1.png')}
+                        source={require('../assets/images/card1.png')}
                         style={{ width: 103, height: 52, }}
                     />
                     <Image
-                        source={require('../asse/images/card2.png')}
+                        source={require('../assets/images/card2.png')}
                         style={{ width: 103, height: 55, borderRadius: 8 }}
                     />
                     <Image
-                        source={require('../asse/images/card3.png')}
+                        source={require('../assets/images/card3.png')}
                         style={{ width: 103, height: 55, borderRadius: 8 }}
                     />
                 </View>

@@ -26,7 +26,7 @@ const SplashScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require('../asse/images/Splash.png')}
+        source={require('../assets/images/Splash.png')}
         style={{width:'100%',height:'100%'}}
       ></ImageBackground>
     </View>

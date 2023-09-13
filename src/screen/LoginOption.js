@@ -1,17 +1,36 @@
-import { View, Text, StyleSheet, TouchableOpacity,Image} from 'react-native'
-import React from 'react'
+import { View, Text, StyleSheet, TouchableOpacity,Image,Appearance} from 'react-native'
+import React, { useEffect, useState } from 'react'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 const LoginOption = ({ navigation }) => {
+
+    const [theme , setTheme] = useState(''); 
+
+    useEffect(()=>{
+        const listener = Appearance.addChangeListener(
+            colorTheme=>{
+                if(colorTheme.colorScheme === 'light')
+                {
+                    setTheme('LIGHT')
+                }
+                else
+                {
+                    setTheme('DARK')
+                }
+            }
+        ) 
+    },[])
+
     return (
-        <View style={styles.container}>
+        <View style={{flex:1,backgroundColor:theme=='LIGHT'?'#fff':'#000'}}>
+            <View style={styles.container}>
             <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('FirstScreen')}>
                 <Image
-                    source={require('../asse/icon/back.png')}
+                    source={require('../assets/icon/back.png')}
                     style={{ width: 40, height: 40 }}
                 />
             </TouchableOpacity>
-            <Text style={styles.headerText}>Let’s Get Started</Text>
+            <Text style={[styles.headerText,{color:theme=='DARK'?'#fff':'#000'}]}>Let’s Get Started</Text>
             <View style={{ marginTop: '47%' }}>
 
                 <TouchableOpacity style={{ ...styles.AccButton, backgroundColor: '#4267B2' }}>
@@ -28,16 +47,16 @@ const LoginOption = ({ navigation }) => {
 
             </View>
             <View style={{ flexDirection: 'row', marginTop: '65%', justifyContent: 'center' }}>
-                <Text style={{ textAlign: 'center' }}>Already have an account?</Text>
+                <Text style={{ textAlign: 'center',color:theme=='DARK'?'#fff':'#000' }}>Already have an account?</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
-                    <Text style={{ fontWeight: 'bold', color: '#1D1E20' }}> Signin</Text>
+                    <Text style={{ fontWeight: 'bold', color:theme=='DARK'?'#fff':'#000' }}> Signin</Text>
                 </TouchableOpacity>
             </View>
 
             <TouchableOpacity style={styles.bottomButton} onPress={() => navigation.navigate('SignUp')}>
                 <Text style={styles.NewAcc}>Create an Account</Text>
             </TouchableOpacity>
-
+            </View>
         </View>
     )
 }
@@ -46,8 +65,7 @@ export default LoginOption
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        margin: 15
+        margin: 15,
     },
     backButton: {
         width: 35,
@@ -61,7 +79,6 @@ const styles = StyleSheet.create({
     headerText: {
         textAlign: 'center',
         fontWeight: 'bold',
-        color: 'black',
         fontSize: 28,
     },
     AccButton: {

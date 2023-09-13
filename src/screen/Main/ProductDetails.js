@@ -9,22 +9,22 @@ const ProductDetails = ({ route, navigation }) => {
         {
             id: '1',
             title: 'Adidas',
-            image: require('../../asse/ProductImg/SingleProductImage/p1.png')
+            image: require('../../assets/ProductImg/SingleProductImage/p1.png')
         },
         {
             id: '2',
             title: 'Nike',
-            image: require('../../asse/ProductImg/SingleProductImage/p2.png')
+            image: require('../../assets/ProductImg/SingleProductImage/p2.png')
         },
         {
             id: '3',
             title: 'Fila',
-            image: require('../../asse/ProductImg/SingleProductImage/p3.png')
+            image: require('../../assets/ProductImg/SingleProductImage/p3.png')
         },
         {
             id: '4',
             title: 'Puma',
-            image: require('../../asse/ProductImg/SingleProductImage/p4.png')
+            image: require('../../assets/ProductImg/SingleProductImage/p4.png')
         },
     ];
 
@@ -63,7 +63,7 @@ const ProductDetails = ({ route, navigation }) => {
                     <View style={{ width: '14%' }}>
                         <TouchableOpacity onPress={() => navigation.navigate('DrawerNavigation')}>
                             <Image
-                                source={require('../../asse/icon/back.png')}
+                                source={require('../../assets/icon/back.png')}
                                 style={{ width: 50, height: 50 }}
                             />
                         </TouchableOpacity>
@@ -111,7 +111,7 @@ const ProductDetails = ({ route, navigation }) => {
                 <View style={{ flexDirection: 'row', marginTop: '5%', alignItems: 'center', justifyContent: 'space-between' }}>
                     <View  style={{ width: '50%',flexDirection: 'row',alignItems:'center' }}>
                         <Image
-                            source={require('../../asse/images/manImg.png')}
+                            source={require('../../assets/images/manImg.png')}
                             style={{ height: 60, width: 60, borderRadius: 50, }}
                         />
 
@@ -129,7 +129,7 @@ const ProductDetails = ({ route, navigation }) => {
                             </Text>
                             <View style={{ flexDirection: 'row' }}>
                                 <Image
-                                    source={require('../../asse/icon/watch.png')}
+                                    source={require('../../assets/icon/watch.png')}
                                     style={{ width: 22, height: 22,}}
                                 />
                                 <Text
@@ -158,7 +158,7 @@ const ProductDetails = ({ route, navigation }) => {
                             > rating</Text>
                         </Text>
                         <Image
-                            source={require('../../asse/images/star.png')}
+                            source={require('../../assets/images/star.png')}
                             style={{ width: '100%', height: 20, resizeMode: 'contain' }}
                         />
                     </View>

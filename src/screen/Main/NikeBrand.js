@@ -8,38 +8,38 @@ const NikeBrand = ({ navigation }) => {
     {
       id: '1',
       title: 'Nike Sportswear Club Fleece',
-      image: require('../../asse/ProductImg/i1.png'),
+      image: require('../../assets/ProductImg/i1.png'),
       price: '$99'
 
     },
     {
       id: '2',
       title: 'Trail Running Jacket Nike Windrunner',
-      image: require('../../asse/ProductImg/i2.png'),
+      image: require('../../assets/ProductImg/i2.png'),
       price: '$99'
     },
     {
       id: '3',
       title: 'Training Top Nike Sport Clash',
-      image: require('../../asse/ProductImg/i3.png'),
+      image: require('../../assets/ProductImg/i3.png'),
       price: '$99'
     },
     {
       id: '4',
       title: 'Trail Running Jacket Nike Windrunner',
-      image: require('../../asse/ProductImg/i4.png'),
+      image: require('../../assets/ProductImg/i4.png'),
       price: '$99'
     },
     {
       id: '3',
       title: 'Training Top Nike Sport Clash',
-      image: require('../../asse/ProductImg/i3.png'),
+      image: require('../../assets/ProductImg/i3.png'),
       price: '$99'
     },
     {
       id: '4',
       title: 'Trail Running Jacket Nike Windrunner',
-      image: require('../../asse/ProductImg/i4.png'),
+      image: require('../../assets/ProductImg/i4.png'),
       price: '$99'
     },
   ];
@@ -70,17 +70,17 @@ const NikeBrand = ({ navigation }) => {
           <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: '8%' }}>
             <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
               <Image
-                source={require('../../asse/icon/BackImg.png')}
+                source={require('../../assets/icon/BackImg.png')}
                 style={{ width:45, height:45, borderRadius: 55 }}
               />
             </TouchableOpacity>
             <Image
-              source={require('../../asse/icon/Nike1.png')}
+              source={require('../../assets/icon/Nike1.png')}
               style={{ width:70, height:45, borderRadius: 10 }}
             />
             <TouchableOpacity>
               <Image
-                source={require('../../asse/icon/BagImg.png')}
+                source={require('../../assets/icon/BagImg.png')}
                 style={{ width: 45, height: 45, borderRadius: 55 }}
               />
             </TouchableOpacity>
@@ -95,7 +95,7 @@ const NikeBrand = ({ navigation }) => {
             </View>
             <TouchableOpacity>
               <Image
-                source={require('../../asse/images/sort.png')}
+                source={require('../../assets/images/sort.png')}
                 style={{ width: 80, height: 40, borderRadius: 8, }}
               />
             </TouchableOpacity>
