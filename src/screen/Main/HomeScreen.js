@@ -3,12 +3,15 @@ import React, { useEffect, useState } from 'react'
 import { Searchbar } from 'react-native-paper';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import HeartComponent from '../../component/HeartComponent';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const HomeScreen = ({ navigation }) => {
 
   const [searchText, setSearchText] = useState('');
   const [storeProduct, setStoreProduct] = useState([]);
 
+  
+ 
 
   const Brand = [
     {
@@ -76,18 +79,18 @@ const HomeScreen = ({ navigation }) => {
 
   const renderItem = ({ item }) => {
     return (
-     
-        <TouchableOpacity 
+
+      <TouchableOpacity
         style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', padding: 8, backgroundColor: '#F5F6FA', margin: 5, borderRadius: 10 }}
-        onPress={()=>navigation.navigate('NikeBrand')}
-        >
+        onPress={() => navigation.navigate('NikeBrand')}
+      >
         <Image
           source={item.image}
           style={{ width: 50, height: 40, resizeMode: 'contain', backgroundColor: '#FEFEFE' }}
         />
         <Text style={{ margin: 2, fontSize: 15, color: '#1D1E20', padding: 5, fontWeight: '600' }}>{item.title}</Text>
-        </TouchableOpacity>
-      
+      </TouchableOpacity>
+
     )
   }
 
@@ -95,7 +98,7 @@ const HomeScreen = ({ navigation }) => {
 
     return (
       <View style={{ width: '47.5%', marginTop: '2%', margin: 5 }}>
-        <TouchableOpacity onPress={()=>navigation.navigate('ProductDetails',{id:item.id})}>
+        <TouchableOpacity onPress={() => navigation.navigate('ProductDetails', { id: item.id })}>
           <ImageBackground
             source={{ uri: item.image }}
             style={{ height: 200, width: '100%' }}
@@ -149,7 +152,7 @@ const HomeScreen = ({ navigation }) => {
         </View>
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: '5%', alignItems: 'center' }}>
-          <Text style={{ color: '#1D1E20', fontSize: 17, fontWeight: '500' }}>Choose Brand</Text>
+          <Text style={{ color: '#1D1E20', fontSize: 17, fontWeight: '500', fontFamily: 'DancingScript-SemiBold' }}>Choose Brand</Text>
           <TouchableOpacity>
             <Text style={{ color: '#8F959E', fontSize: 13 }}>View All</Text>
           </TouchableOpacity>
@@ -204,12 +207,13 @@ const styles = StyleSheet.create({
   headerName: {
     fontSize: 28,
     color: '#1D1E20',
-    fontWeight: '900',
-    marginTop: '1%'
+    marginTop: '1%',
+    fontFamily: 'DancingScript-Bold',
   },
   subText: {
     fontSize: 15,
-    color: '#8F959E'
+    color: '#8F959E',
+
   },
   searchStyle: {
     width: '83%',
