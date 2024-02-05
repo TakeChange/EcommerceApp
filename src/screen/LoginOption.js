@@ -6,23 +6,23 @@ const LoginOption = ({ navigation }) => {
 
     const [theme , setTheme] = useState(''); 
 
-    useEffect(()=>{
-        const listener = Appearance.addChangeListener(
-            colorTheme=>{
-                if(colorTheme.colorScheme === 'light')
-                {
-                    setTheme('LIGHT')
-                }
-                else
-                {
-                    setTheme('DARK')
-                }
-            }
-        ) 
-    },[])
+    // useEffect(()=>{
+    //     const listener = Appearance.addChangeListener(
+    //         colorTheme=>{
+    //             if(colorTheme.colorScheme === 'light')
+    //             {
+    //                 setTheme('LIGHT')
+    //             }
+    //             else
+    //             {
+    //                 setTheme('DARK')
+    //             }
+    //         }
+    //     ) 
+    // },[])
 
     return (
-        <View style={{flex:1,backgroundColor:theme=='LIGHT'?'#fff':'#000'}}>
+        <View style={{flex:1,backgroundColor:'#ffffff'}}>
             <View style={styles.container}>
             <TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('FirstScreen')}>
                 <Image
@@ -30,7 +30,7 @@ const LoginOption = ({ navigation }) => {
                     style={{ width: 40, height: 40 }}
                 />
             </TouchableOpacity>
-            <Text style={[styles.headerText,{color:theme=='DARK'?'#fff':'#000'}]}>Let’s Get Started</Text>
+            <Text style={[styles.headerText,{color:'#000'}]}>Let’s Get Started</Text>
             <View style={{ marginTop: '47%' }}>
 
                 <TouchableOpacity style={{ ...styles.AccButton, backgroundColor: '#4267B2' }}>
@@ -47,9 +47,9 @@ const LoginOption = ({ navigation }) => {
 
             </View>
             <View style={{ flexDirection: 'row', marginTop: '65%', justifyContent: 'center' }}>
-                <Text style={{ textAlign: 'center',color:theme=='DARK'?'#fff':'#000' }}>Already have an account?</Text>
+                <Text style={{ textAlign: 'center',color:'#000' }}>Already have an account?</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
-                    <Text style={{ fontWeight: 'bold', color:theme=='DARK'?'#fff':'#000' }}> Signin</Text>
+                    <Text style={{ fontWeight: 'bold', color:'#000' }}> Signin</Text>
                 </TouchableOpacity>
             </View>
 

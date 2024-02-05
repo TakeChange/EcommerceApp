@@ -58,7 +58,7 @@ const AddReview = ({ navigation }) => {
                 </View>
 
                 <TouchableOpacity style={styles.bottomButton}
-                  onPress={()=>navigation.navigate('Review')}>
+                  onPress={()=>navigation.navigate('Cart')}>
                     <Text style={styles.NewAcc}>Add to cart</Text>
                 </TouchableOpacity>
             </View>
