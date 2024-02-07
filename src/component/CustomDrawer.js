@@ -1,5 +1,5 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer'
 import ToggleSwitch from 'toggle-switch-react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -8,6 +8,22 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const CustomDrawer = (props) => {
     const { navigation } = props;
     const [isEnabled, setIsEnabled] = useState(false);
+    const [user, setUser] = useState('');
+
+    useEffect(() => {
+        check();
+      })
+    
+      const check = async () => {
+        try {
+          var uname = await AsyncStorage.getItem('uname');
+          setUser(uname);
+        }
+        catch (e) {
+          console.log(e)
+        }
+      }
+    
 
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
@@ -54,7 +70,7 @@ const CustomDrawer = (props) => {
                                 marginBottom: 5,
                                 fontWeight: 'bold'
                             }}>
-                            Mr Raju
+                            {user}
                         </Text>
                         <View style={{ flexDirection: 'row' }}>
                             <Text

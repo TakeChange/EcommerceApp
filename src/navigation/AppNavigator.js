@@ -104,6 +104,16 @@ const AppNavigator = () => {
                     component={NikeBrand}
                     options={{ headerShown: false }}
                 />
+                <Stack.Screen
+                name="Cart"
+                component={Cart}
+                options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                    name='payment'
+                    component={Payment}
+                    options={{ headerShown: false }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     )
