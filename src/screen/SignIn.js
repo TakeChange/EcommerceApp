@@ -37,25 +37,21 @@ const SignIn = ({ navigation }) => {
         }
     }
 
-    const check = async () =>{
-        try
-        {
+    const check = async () => {
+        try {
             var uname = await AsyncStorage.getItem('uname');
             var pass = await AsyncStorage.getItem('pass');
 
-            if(uname == username && pass == password)
-            {
-                ToastAndroid.show('Login Successfully',ToastAndroid.LONG);
-                await AsyncStorage.setItem('login','yes');
+            if (uname == username && pass == password) {
+                ToastAndroid.show('Login Successfully', ToastAndroid.LONG);
+                await AsyncStorage.setItem('login', 'yes');
                 navigation.navigate('DrawerNavigation')
             }
-            else
-            {
-                ToastAndroid.show('Username and password do not match',ToastAndroid.LONG);
+            else {
+                ToastAndroid.show('Username and password do not match', ToastAndroid.LONG);
             }
         }
-        catch(e)
-        {
+        catch (e) {
             console.log(e)
         }
     }
