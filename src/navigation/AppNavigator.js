@@ -18,6 +18,7 @@ import Address from '../screen/Address'
 import NikeBrand from '../screen/Main/NikeBrand'
 import Cart from '../screen/Main/Cart'
 import Payment from '../screen/Payment'
+import Setting from '../screen/Setting'
 
 
 const Demo = () => {
@@ -114,6 +115,12 @@ const AppNavigator = () => {
             <Stack.Screen
                     name='payment'
                     component={Payment}
+                    options={{ headerShown: false }}
+                />
+
+               <Stack.Screen
+                    name='Setting'
+                    component={Setting}
                     options={{ headerShown: false }}
                 />
             </Stack.Navigator>

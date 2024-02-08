@@ -2,6 +2,7 @@ import { View, Text, StyleSheet, TouchableOpacity,Image,Appearance} from 'react-
 import React, { useEffect, useState } from 'react'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
+
 const LoginOption = ({ navigation }) => {
 
     const [theme , setTheme] = useState(''); 
@@ -20,6 +21,10 @@ const LoginOption = ({ navigation }) => {
     //         }
     //     ) 
     // },[])
+
+
+
+
 
     return (
         <View style={{flex:1,backgroundColor:'#ffffff'}}>
@@ -42,6 +47,7 @@ const LoginOption = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity style={{ ...styles.AccButton, backgroundColor: '#EA4335' }}>
+               
                     <Text style={styles.textStyle}><FontAwesome name='google' size={16} color='#FFFFFF' />  Google</Text>
                 </TouchableOpacity>
 
