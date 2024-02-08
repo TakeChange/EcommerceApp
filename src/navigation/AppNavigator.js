@@ -18,6 +18,7 @@ import Address from '../screen/Address'
 import NikeBrand from '../screen/Main/NikeBrand'
 import Cart from '../screen/Main/Cart'
 import Payment from '../screen/Payment'
+import Password from '../screen/Password'
 
 
 const Demo = () => {
@@ -114,6 +115,11 @@ const AppNavigator = () => {
             <Stack.Screen
                     name='payment'
                     component={Payment}
+                    options={{ headerShown: false }}
+                />
+                <Stack.Screen
+                    name='password'
+                    component={Password}
                     options={{ headerShown: false }}
                 />
             </Stack.Navigator>
