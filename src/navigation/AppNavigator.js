@@ -15,7 +15,6 @@ import AddReview from '../screen/Main/AddReview'
 import Review from '../screen/Main/Review'
 import AddNewCard from '../screen/AddNewCard'
 import Address from '../screen/Address'
-import NikeBrand from '../screen/Main/NikeBrand'
 import Cart from '../screen/Main/Cart'
 import Payment from '../screen/Payment'
 import Setting from '../screen/Setting'
@@ -108,11 +107,11 @@ const AppNavigator = () => {
                     options={{ headerShown: false }}
                 />
                 <Stack.Screen
-                name="Cart"
-                component={Cart}
-                options={{ headerShown: false }}
-            />
-            <Stack.Screen
+                    name="Cart"
+                    component={Cart}
+                    options={{ headerShown: false }}
+                />
+                <Stack.Screen
                     name='payment'
                     component={Payment}
                     options={{ headerShown: false }}
