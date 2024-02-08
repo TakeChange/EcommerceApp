@@ -16,9 +16,7 @@ import Review from '../screen/Main/Review'
 import AddNewCard from '../screen/AddNewCard'
 import Address from '../screen/Address'
 import NikeBrand from '../screen/Main/NikeBrand'
-import Cart from '../screen/Main/Cart'
-import Payment from '../screen/Payment'
-
+import { Card } from 'react-native-paper'
 
 const Demo = () => {
     return (
