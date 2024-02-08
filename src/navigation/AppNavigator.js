@@ -18,6 +18,7 @@ import Address from '../screen/Address'
 import Cart from '../screen/Main/Cart'
 import Payment from '../screen/Payment'
 import Setting from '../screen/Setting'
+import NikeBrand from '../screen/Main/NikeBrand'
 
 
 const Demo = () => {
